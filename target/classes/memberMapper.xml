@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="memberMapper"></mapper>
+<mapper namespace="com.shopping.mall.member.memberInterface">
+	<select id="logInCheck" parameterType="com.shopping.mall.member.memberinfo" resultType="com.shopping.mall.member.memberinfo">
+		select*from S_Member where member_id=#{member_id}
+	</select>
+	<insert id="newMember" parameterType="com.shopping.mall.member.memberinfo">
+		insert into S_Member values(#{member_mail},#{member_id},#{member_pw},#{member_name},#{member_phone},to_date(#{member_birth},'YYYYMMDD'),#{member_gender})
+	</insert>
+</mapper>

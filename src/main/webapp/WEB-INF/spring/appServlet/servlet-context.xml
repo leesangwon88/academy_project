@@ -28,9 +28,9 @@
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
-			value="jdbc:oracle:thin:@jdbc:oracle:thin:@172.16.4.21:1521:xe" />
-		<beans:property name="username" value="ree" />
-		<beans:property name="password" value="ree" />
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<beans:property name="username" value="junheefree" />
+		<beans:property name="password" value="rka789" />
 	</beans:bean>
 
 	<beans:bean id="transactionManager"
@@ -43,7 +43,7 @@
 		<beans:property name="typeAliasesPackage" value="com.shopping.mall" />
 		<beans:property name="mapperLocations">
 			<beans:list>
-				<beans:value>classpath:testMapper.xml</beans:value>
+				<beans:value>classpath:memberMapper.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>

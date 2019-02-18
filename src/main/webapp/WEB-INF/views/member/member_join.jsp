@@ -6,28 +6,28 @@
         <div class="join_rap">
             <h2 class="title">회원가입</h2>
             <div class="join_area">
-                <form action="">
+                <form action="newMemberCheck.go" method="post">
                     <table>
                         <tr>
-                            <td><input type="text" placeholder="이메일"><a href="" class="check">중복확인</a></td>
+                            <td><input name="member_mail" type="text" placeholder="이메일"><a href="" class="check">중복확인</a></td>
                         </tr>
                         <tr>
-                            <td><input type="text" placeholder="아이디"><a href="" class="check">중복확인</a></td>
+                            <td><input name="member_id" type="text" placeholder="아이디"><a href="" class="check">중복확인</a></td>
                         </tr>
                         <tr>
-                            <td><input type="password" placeholder="비밀번호 (8~16자 이내 영대소문자, 숫자, 특수문자의 조합)"></td>
+                            <td><input name="member_pw" type="password" placeholder="비밀번호 (8~16자 이내 영대소문자, 숫자, 특수문자의 조합)"></td>
                         </tr>
                         <tr>
                             <td><input type="password" placeholder="비밀번호 확인"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" placeholder="이름"></td>
+                            <td><input name="member_name" type="text" placeholder="이름"></td>
                         </tr>
                         <tr>
-                            <td><input type="text" placeholder="휴대폰번호"></td>
+                            <td><input name="member_phone" type="text" placeholder="휴대폰번호"></td>
                         </tr>
                         <tr>
-                            <td class="date_box"><span class="date"><input type="text">년 <input type="text">월 <input type="text">일</span><span class="gender"><input type="radio" name="sex" id="man" checked><label for="man" >남</label><input type="radio" name="sex" id="girl"><label for="girl">여</label></span></td>
+                            <td class="date_box"><span class="date"><input name="year" type="text">년 <input name="month" type="text">월 <input name="day" type="text">일</span><span class="gender"><input name="member_gender" value="m" type="radio" id="man" checked><label for="man" >남</label><input type="radio" name="member_gender" value="w" id="girl"><label for="girl">여</label></span></td>
                         </tr>
                         <tr>
                             <td></td>

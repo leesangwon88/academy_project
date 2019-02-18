@@ -7,9 +7,9 @@
 			<div class="login_area">
 				<h3>로그인</h3>
 				<div class="login_box">
-					<form>
-						<input type="text" class="user_int" name="" placeholder="아이디 입력">
-						<input type="password" class="user_int" name="" placeholder="비밀번호 입력">
+					<form action="logInCheck.go" method="post">
+						<input type="text" class="user_int" name="member_id" placeholder="아이디 입력">
+						<input type="password" class="user_int" name="member_pw" placeholder="비밀번호 입력">
 						<input type="checkbox" name="" id="id_save"><label for="id_save">아이디저장</label>
 						<button class="btn_login">로그인</button>
 					</form>
