@@ -1,4 +1,4 @@
-package com.showpping.mall;
+package com.shopping.mall;
 
 import javax.servlet.http.HttpServletRequest;
 

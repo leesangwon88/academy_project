@@ -23,7 +23,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 
-	<context:component-scan base-package="com.showpping.mall" />
+	<context:component-scan base-package="com.shopping.mall" />
 
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
@@ -40,7 +40,7 @@
 
 	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
-		<beans:property name="typeAliasesPackage" value="com.showpping.mall" />
+		<beans:property name="typeAliasesPackage" value="com.shopping.mall" />
 		<beans:property name="mapperLocations">
 			<beans:list>
 				<beans:value>classpath:testMapper.xml</beans:value>
