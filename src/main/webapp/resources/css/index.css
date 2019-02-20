@@ -29,6 +29,8 @@
 
 .sub_menu li {
     float:left;
+    padding: 10px 10px 12px;
+    line-height: 10px;
     color:#9b9b9b;
     background-image: url(../img/index/submenu_bar.jpg);
     background-position: center left;
@@ -39,8 +41,15 @@
     background: none;
 }
 
+.sub_menu li.search_box {
+    padding:0;
+}
+
+.sub_menu li.link_put {
+    padding:8px 10px 9px;
+}
+
 .sub_menu li a {
-    padding: 10px;
     display: inline-block;
     vertical-align: bottom;
     text-align: center;
@@ -48,6 +57,11 @@
     font-size:11px;
     color:#9b9b9b;
 }
+
+.sub_menu li a:hover {
+    color:#4a4a4a;
+}
+
 .sub_menu li.link_put img {
     margin-left: 3px;
     margin-right: 3px;

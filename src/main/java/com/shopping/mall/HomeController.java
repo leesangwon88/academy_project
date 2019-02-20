@@ -16,8 +16,15 @@ public class HomeController {
 	@Autowired
 	private memberDAO md;
 	
+	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest req) {
+		req.setAttribute("headerPage", "common/header.jsp");
+		req.setAttribute("footer", "common/footer.jsp");
+		return "index";	
+	}	
+	@RequestMapping(value = "/login.go", method = RequestMethod.GET)
+	public String login(HttpServletRequest req) {
 		req.setAttribute("headerPage", "../common/header.jsp");
 		req.setAttribute("footer", "../common/footer.jsp");
 		return "member/login";	
@@ -29,18 +36,26 @@ public class HomeController {
 		return "member/member_join";
 	}
 	@RequestMapping(value = "/logInCheck.go", method = RequestMethod.POST)
-	public String logInCheck(HttpServletRequest request,memberinfo mi) {
-		if (md.logInCheck(mi, request)) {
-			return "member/home";
+	public String logInCheck(HttpServletRequest req,memberinfo mi) {
+		if (md.logInCheck(mi, req)) {
+			req.setAttribute("headerPage", "../common/header.jsp");
+			req.setAttribute("footer", "../common/footer.jsp");
+			return "index";
 		}else{
+			req.setAttribute("headerPage", "../common/header.jsp");
+			req.setAttribute("footer", "../common/footer.jsp");
 			return "member/login";
 		}
 	}
 	@RequestMapping(value = "/newMemberCheck.go", method = RequestMethod.POST)
-	public String newMemberCheck(HttpServletRequest request,memberinfo mi) {
-		if (md.newMemberCheck(mi, request)) {
-			return "member/home";
+	public String newMemberCheck(HttpServletRequest req,memberinfo mi) {
+		if (md.newMemberCheck(mi, req)) {
+			req.setAttribute("headerPage", "../common/header.jsp");
+			req.setAttribute("footer", "../common/footer.jsp");
+			return "index";
 		}else{
+			req.setAttribute("headerPage", "../common/header.jsp");
+			req.setAttribute("footer", "../common/footer.jsp");
 			return "member/member_join";
 		}
 	}

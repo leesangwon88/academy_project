@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <html lang="ko">
 
 <head>
@@ -10,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="resources/css/index.css">
     <link rel="stylesheet" type="text/css" href="resources/css/member.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css">
 </head>
 
 <body>
@@ -23,13 +27,29 @@
             </div>
             <div class="sub_menu clear">
                 <ul class="clear">
-                    <li><a href="">로그인</a></li>
-                    <li><a href="">회원가입</a></li>
+                    <c:if test="${sessionScope.member != null}">
+                    <li>
+                        ${sessionScope.member.member_name}님         
+                    </li>
+                    </c:if>  
+                    <li>
+                    <c:choose>
+                    	<c:when test="${sessionScope.member != null}">
+                    	   <a href="logout">로그아웃</a>
+                        </c:when>
+                    	<c:otherwise>
+                    	   <a href="login.go">로그인</a>
+                    	</c:otherwise>                    	
+                    </c:choose>
+                    </li>
+                    <c:if test="${sessionScope.member == null}">
+                    <li><a href="newMember.go">회원가입</a></li>
+                    </c:if>                    
                     <li><a href="">마이페이지</a></li>
                     <li><a href="">커뮤니티</a></li>
                     <li><a href="">고객센터</a></li>
                     <li class="link_put"><a href=""><img src="resources/img/index/cart_icon.png" alt="장바구니"><span>0</span></a></li>
-                    <li>
+                    <li class="search_box">
                         <div class="search">
                             <input>
                             <a href=""><img src="resources/img/index/search.png"></a>
