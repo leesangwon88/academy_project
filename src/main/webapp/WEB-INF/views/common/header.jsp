@@ -68,22 +68,115 @@
             </div>
         </div>
         <div id="nav">
-        
-            <ul class="clear">
+            <ul class="nav_list clear">
                 <li class="clear"><a href="">BEST50</a></li>
                 <li><a href="">NEW30%</a></li>
                 <li><a href="">코디세트</a></li>
                 <li class="emp"><a href="">당일발송</a></li>
                 <li><a href="">커플룩</a></li>
-                <li><a href="">아우터</a></li>
-                <li><a href="">티셔츠</a></li>
-                <li><a href="">팬츠</a></li>
-                <li><a href="">셔츠</a></li>
+                <li>
+                    <a href="">아우터</a>
+                     <div class="list_detail">
+                        <ul>
+                            <li><a href="">패딩</a></li>
+                            <li><a href="">코트</a></li>
+                            <li><a href="">점퍼/집업</a></li>
+                            <li><a href="">가디건</a></li>
+                            <li><a href="">자켓</a></li>
+                            <li><a href="">라이더/무스탕</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">티셔츠</a>
+                     <div class="list_detail">
+                        <ul>
+                            <li><a href="">후드티</a></li>
+                            <li><a href="">맨투맨</a></li>
+                            <li><a href="">니트</a></li>
+                            <li><a href="">폴라</a></li>
+                            <li><a href="">긴팔티</a></li>
+                            <li><a href="">나시</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">팬츠</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">데님</a></li>
+                            <li><a href="">슬랙스</a></li>
+                            <li><a href="">면바지</a></li>
+                            <li><a href="">밴딩</a></li>
+                            <li><a href="">트레이닝</a></li>
+                            <li><a href="">반바지</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">셔츠</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">체크 / 패턴</a></li>
+                            <li><a href="">베이직 / 데님</a></li>
+                            <li><a href="">스트라이프</a></li>
+                            <li><a href="">반팔 / 7부셔츠</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="">트레이닝</a></li>
-                <li><a href="">신발</a></li>
-                <li><a href="">가방</a></li>
-                <li><a href="">악세사리</a></li>
-                <li><a href="">빅사이즈</a></li>
+                <li>
+                    <a href="">신발</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">키높이 신발</a></li>
+                            <li><a href="">스니커즈/운동화</a></li>
+                            <li><a href="">로퍼/구두</a></li>
+                            <li><a href="">워커</a></li>
+                            <li><a href="">수제화</a></li>
+                            <li><a href="">깔창</a></li>
+                            <li><a href="">샌들 / 쪼리</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">가방</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">백팩</a></li>
+                            <li><a href="">크로스팩</a></li>
+                            <li><a href="">토드 / 숄더</a></li>
+                            <li><a href="">클러치 / 힙색</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">악세사리</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">라이프</a></li>
+                            <li><a href="">머플러/장갑</a></li>
+                            <li><a href="">모자</a></li>
+                            <li><a href="">밸트</a></li>
+                            <li><a href="">쥬얼리</a></li>
+                            <li><a href="">양말</a></li>
+                            <li><a href="">시계/타이</a></li>
+                            <li><a href="">안경</a></li>
+                            <li><a href="">선글라스</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="">빅사이즈</a>
+                    <div class="list_detail">
+                        <ul>
+                            <li><a href="">아우터</a></li>
+                            <li><a href="">티셔츠</a></li>
+                            <li><a href="">셔츠</a></li>
+                            <li><a href="">팬츠</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="emp"><a href="">~90% SALE</a></li>
             </ul>
         </div>
