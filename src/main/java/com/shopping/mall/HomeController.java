@@ -12,6 +12,9 @@ import com.shopping.mall.member.memberinfo;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	private memberDAO md;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(HttpServletRequest req) {
@@ -34,9 +37,15 @@ public class HomeController {
 		return "member/member_join";
 	}
 
-	@RequestMapping(value = "/logInCheck.go", method = RequestMethod.POST)
-	public String logInCheck(HttpServletRequest req) {
-		return "member/login";
+	@RequestMapping(value = "/logInCheck", method = RequestMethod.GET)
+	public String logInCheck(HttpServletRequest request,memberinfo mi) {
+		if (md.logInCheck(mi, request)) {
+			request.setAttribute("headerPage", "common/header.jsp");
+			request.setAttribute("footer", "common/footer.jsp");
+			return "index";
+		}else{
+			return "member/login";
+		}
 	}
 
 	@RequestMapping(value = "/newMemberCheck", method = {RequestMethod.GET,RequestMethod.POST})
