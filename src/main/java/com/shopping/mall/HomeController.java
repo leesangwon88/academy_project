@@ -38,6 +38,8 @@ public class HomeController {
 	@RequestMapping(value = "/logInCheck.go", method = RequestMethod.POST)
 	public String logInCheck(HttpServletRequest request,memberinfo mi) {
 		if (md.logInCheck(mi, request)) {
+			request.setAttribute("headerPage", "common/header.jsp");
+			request.setAttribute("footer", "common/footer.jsp");
 			return "index";
 		}else{
 			return "member/login";
