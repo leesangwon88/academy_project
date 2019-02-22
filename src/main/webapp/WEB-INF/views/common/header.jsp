@@ -45,7 +45,7 @@
                     <c:if test="${sessionScope.member == null}">
                     <li><a href="newMember.go">회원가입</a></li>
                     </c:if>                    
-                    <li><a href="">마이페이지</a></li>
+                    <li><a href="myPage">마이페이지</a></li>
                     <li><a href="">커뮤니티</a></li>
                     <li><a href="">고객센터</a></li>
                     <li class="link_put"><a href=""><img src="resources/img/index/cart_icon.png" alt="장바구니"><span>0</span></a></li>

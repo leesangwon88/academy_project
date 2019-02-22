@@ -6,8 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shopping.test.member.memberInterface;
-import com.shopping.test.member.memberinfo;
+import com.shopping.mall.member.memberInterface;
+import com.shopping.mall.member.memberinfo;
 
 
 @Service
