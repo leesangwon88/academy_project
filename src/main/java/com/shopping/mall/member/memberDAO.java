@@ -6,6 +6,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.shopping.test.member.memberInterface;
+import com.shopping.test.member.memberinfo;
+
+
 @Service
 public class memberDAO {
 	
@@ -50,6 +54,33 @@ public class memberDAO {
 			return true;
 		} catch (Exception e) {
 			request.setAttribute("newMemberResult", "데이터베이스에 문제가 생겼습니다");
+			return false;
+		}
+	}
+	public memberinfo memberJSON(memberinfo mi, HttpServletRequest req){
+		return ss.getMapper(memberInterface.class).logInCheck(mi);
+	}
+	public boolean updateMember(memberinfo mi,HttpServletRequest request){
+		String y = request.getParameter("year");
+		String m = request.getParameter("month");
+		String d = request.getParameter("day");
+		mi.setMember_birth(y+m+d);
+		try {
+			ss.getMapper(memberInterface.class).updateMember(mi);
+			request.setAttribute("updateMemberResult", "성공적으로 수정되었습니다.");
+			return true;
+		} catch (Exception e) {
+			request.setAttribute("updateMemberResult", "데이터베이스에 문제가 생겼습니다");
+			return false;
+		}
+		
+	}
+	public boolean deleteMember(memberinfo mi, HttpServletRequest request){
+		try {
+			ss.getMapper(memberInterface.class).deleteMember(mi);
+			return true;
+		} catch (Exception e) {
+			request.setAttribute("deleteMemberResult", "데이터베이스에 문제가 생겼습니다");
 			return false;
 		}
 	}

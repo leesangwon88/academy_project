@@ -55,5 +55,4 @@ public class memberinfo {
 	public void setMember_gender(String member_gender) {
 		this.member_gender = member_gender;
 	}
-	
 }
