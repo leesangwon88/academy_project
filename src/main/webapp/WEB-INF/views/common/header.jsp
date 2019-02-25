@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>                                
 <html lang="ko">
 
 <head>
@@ -9,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>쇼핑몰</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/css/reset.css">
     <link rel="stylesheet" type="text/css" href="resources/css/index.css">
     <link rel="stylesheet" type="text/css" href="resources/css/member.css">
@@ -45,7 +45,7 @@
                     <c:if test="${sessionScope.member == null}">
                     <li><a href="newMember.go">회원가입</a></li>
                     </c:if>                    
-                    <li><a href="">마이페이지</a></li>
+                    <li><a href="myPage.go">마이페이지</a></li>
                     <li><a href="">커뮤니티</a></li>
                     <li><a href="">고객센터</a></li>
                     <li class="link_put"><a href=""><img src="resources/img/index/cart_icon.png" alt="장바구니"><span>0</span></a></li>
@@ -60,7 +60,7 @@
         </div>
         <div class="logo_site clear">
             <div class="box_logo">
-                <a href=""><img src="resources/img/index/main_logo.gif" title="SUPERSTARI"></a>
+                <a href="main.go"><img src="resources/img/index/main_logo.gif" title="SUPERSTARI"></a>
             </div>
             <div class="search">
                 <input>
