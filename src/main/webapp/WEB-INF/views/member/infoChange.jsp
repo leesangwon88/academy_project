@@ -8,7 +8,7 @@
 				<div class="join_rap">
                     <h2 class="title">개인정보 수정</h2>
                     <div class="join_area">
-                        <form action="memberUpdate.go" method="post" name="form" onsubmit="return memberCheck();">
+                        <form action="memberUpdate.go" method="post" name="form" onsubmit="return memberInfoChangeCheck();">
                             <table>
                                 <tbody><tr>
                                     <td><input name="member_mail" type="text" placeholder="이메일" value="${sessionScope.member.member_mail}"><!-- <a href="" class="check">중복확인</a> --></td>

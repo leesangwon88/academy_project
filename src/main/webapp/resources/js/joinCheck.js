@@ -54,6 +54,7 @@ function notContains(field, set){
 // <input>을 넣어주면 숫자만 있는지 검사하는 함수
 // 불순물이 있으면 true, 아니라면 false
 function isNotNumber(field){
+	console.log(field);
 	return isNaN(field.value);
 }
 

@@ -12,7 +12,7 @@
                             <td><input name="member_mail" type="text" placeholder="이메일"><!-- <a href="" class="check">중복확인</a> --></td>
                         </tr>
                         <tr>
-                            <td><input name="member_id" type="text" placeholder="아이디"><a href="#" onclick="IDCheck(); return false;" class="check">중복확인</a></td>
+                            <td><input name="member_id" type="text" placeholder="아이디"><a href="#" id="idCheck" onclick="IDCheck(); return false;" class="check">중복확인</a></td>
                         </tr>
                         <tr>
                             <td><input name="member_pw" type="password" placeholder="비밀번호 (8~16자 이내 영대소문자, 숫자, 특수문자의 조합)"></td>
@@ -71,33 +71,7 @@
             </div>
             
             <script type="text/javascript" src="resources/js/joinCheck.js"></script>
-            <script type="text/javascript" src="resources/js/member.js"></script>
-            <script type="text/javascript">
-            	function IDCheck() {
-            		var idCheck = document.form.member_id;
-            		var idVal = idCheck.value;
-            		if(isEmpty(idCheck)){
-            			alert("ID를 입력해주세요");
-            			idCheck.focus();
-            			return false;
-            		}
-            		
-                    $.ajax({
-                    	url : 'http://localhost/mall/newMemberAJAXCheck.go',
-						data: {member_id:idVal},
-						dataType:'json'
-                    })
-                    .done(function(json){
-                    	alert("이미 있는 아이디입니다.");
-                    })
-                    .fail(function(){
-                    	alert("사용가능한 아이디입니다.");
-                    })
-             	}  
-             </script>
-            
-            
-            
+            <script type="text/javascript" src="resources/js/member.js"></script>            
             <div class="join_info_area clear">
                 <div class="join_info1">
                     <h3>이용약관</h3>
