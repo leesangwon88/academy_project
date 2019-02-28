@@ -10,6 +10,13 @@ public class memberinfo {
 	private BigDecimal member_phone;
 	private String member_birth;
 	private String member_gender;
+	private String member_address;
+	public String getMember_address() {
+		return member_address;
+	}
+	public void setMember_address(String member_address) {
+		this.member_address = member_address;
+	}
 	public memberinfo() {
 		// TODO Auto-generated constructor stub
 	}

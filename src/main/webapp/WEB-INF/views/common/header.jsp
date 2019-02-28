@@ -35,7 +35,7 @@
                     <li>
                     <c:choose>
                     	<c:when test="${sessionScope.member != null}">
-                    	   <a href="logout">로그아웃</a>
+                    	   <a href="logOut.go">로그아웃</a>
                         </c:when>
                     	<c:otherwise>
                     	   <a href="login.go">로그인</a>

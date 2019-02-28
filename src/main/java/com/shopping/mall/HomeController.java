@@ -36,6 +36,14 @@ public class HomeController {
 		req.setAttribute("footer", "../common/footer.jsp");
 		return "member/login";	
 	}
+	@RequestMapping(value = "/logOut.go", method = RequestMethod.GET)
+	public String logOut(HttpServletRequest req) {
+		req.getSession().setAttribute("member", null);
+		req.getSession().setMaxInactiveInterval(1);
+		req.setAttribute("headerPage", "common/header.jsp");
+		req.setAttribute("footer", "common/footer.jsp");
+		return "index";	
+	}
 	@RequestMapping(value = "/newMember.go", method = RequestMethod.GET)
 	public String newMember(HttpServletRequest req) {
 		req.setAttribute("headerPage", "../common/header.jsp");

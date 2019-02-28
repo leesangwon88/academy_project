@@ -5,6 +5,8 @@ create table S_Member(
 	member_name varchar2(20 char) not null,
 	member_phone number(12) not null,
 	member_birth date not null,
-	member_gender varchar2(3 char) not null
+	member_gender varchar2(3 char) not null,
+	member_address varchar2(50 char) not null
 );
 select*from S_Member;
+drop table S_Member cascade constraint purge;

@@ -47,10 +47,20 @@ public class memberDAO {
 		String d = request.getParameter("day");
 		String member_birth = y+m+d;
 		mi.setMember_birth(member_birth);
+		System.out.println(mi.getMember_mail());
+		System.out.println(mi.getMember_id());
+		System.out.println(mi.getMember_pw());
+		System.out.println(mi.getMember_birth());
+		System.out.println(mi.getMember_phone());
+		System.out.println(mi.getMember_name());
+		System.out.println(mi.getMember_gender());
+		System.out.println(mi.getMember_address());
 		try {
 			ss.getMapper(memberInterface.class).newMember(mi);
 			request.getSession().setAttribute("member", mi);
 			request.setAttribute("newMemberResult", mi.getMember_name()+"회원가입을 축하드립니다");
+			request.getSession().setAttribute("member", mi);
+			request.getSession().setMaxInactiveInterval(30*60);
 			return true;
 		} catch (Exception e) {
 			request.setAttribute("newMemberResult", "데이터베이스에 문제가 생겼습니다");
@@ -68,6 +78,8 @@ public class memberDAO {
 		try {
 			ss.getMapper(memberInterface.class).updateMember(mi);
 			request.setAttribute("updateMemberResult", "성공적으로 수정되었습니다.");
+			request.getSession().setAttribute("member", mi);
+			request.getSession().setMaxInactiveInterval(30*60);
 			return true;
 		} catch (Exception e) {
 			request.setAttribute("updateMemberResult", "데이터베이스에 문제가 생겼습니다");
@@ -78,6 +90,8 @@ public class memberDAO {
 	public boolean deleteMember(memberinfo mi, HttpServletRequest request){
 		try {
 			ss.getMapper(memberInterface.class).deleteMember(mi);
+			request.getSession().setAttribute("member", mi);
+			request.getSession().setMaxInactiveInterval(1);
 			return true;
 		} catch (Exception e) {
 			request.setAttribute("deleteMemberResult", "데이터베이스에 문제가 생겼습니다");

@@ -5,12 +5,12 @@
 		select*from S_Member where member_id=#{member_id}
 	</select>
 	<insert id="newMember" parameterType="com.shopping.mall.member.memberinfo">
-		insert into S_Member values(#{member_mail},#{member_id},#{member_pw},#{member_name},#{member_phone},to_date(#{member_birth},'YYYYMMDD'),#{member_gender})
+		insert into S_Member values(#{member_mail},#{member_id},#{member_pw},#{member_name},#{member_phone},to_date(#{member_birth},'YYYYMMDD'),#{member_gender},#{member_address})
 	</insert>
 	<update id="updateMember" parameterType="com.shopping.mall.member.memberinfo">
-		update S_Member set member_mail = #{member_mail}, member_pw = #{member_pw}, member_name = #{member_name}, member_birth = #{member_birth}, member_gender = #{member_gender} where member_id=#{member_id}
+		update S_Member set member_mail = #{member_mail}, member_pw = #{member_pw}, member_name = #{member_name}, member_birth = #{member_birth}, member_gender = #{member_gender}, member_address = #{member_address} where member_id=#{member_id}
 	</update>
 	<delete id="deleteMember" parameterType="com.shopping.mall.member.memberinfo">
-		delete from S_Member where member_id = #{member_id}
+		delete from S_Member where member_id = #{member_id} and member_pw = #{member_pw}
 	</delete>
 </mapper>
