@@ -1,5 +1,7 @@
 package com.shopping.mall.member;
 
+import java.math.BigDecimal;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
@@ -47,14 +49,6 @@ public class memberDAO {
 		String d = request.getParameter("day");
 		String member_birth = y+m+d;
 		mi.setMember_birth(member_birth);
-		System.out.println(mi.getMember_mail());
-		System.out.println(mi.getMember_id());
-		System.out.println(mi.getMember_pw());
-		System.out.println(mi.getMember_birth());
-		System.out.println(mi.getMember_phone());
-		System.out.println(mi.getMember_name());
-		System.out.println(mi.getMember_gender());
-		System.out.println(mi.getMember_address());
 		try {
 			ss.getMapper(memberInterface.class).newMember(mi);
 			request.getSession().setAttribute("member", mi);
@@ -90,7 +84,7 @@ public class memberDAO {
 	public boolean deleteMember(memberinfo mi, HttpServletRequest request){
 		try {
 			ss.getMapper(memberInterface.class).deleteMember(mi);
-			request.getSession().setAttribute("member", mi);
+			request.getSession().setAttribute("member", null);
 			request.getSession().setMaxInactiveInterval(1);
 			return true;
 		} catch (Exception e) {

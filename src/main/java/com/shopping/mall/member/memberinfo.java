@@ -1,14 +1,13 @@
 package com.shopping.mall.member;
 
-import java.math.BigDecimal;
 
 public class memberinfo {
 	private String member_mail;
 	private String member_id;
 	private String member_pw;
 	private String member_name;
-	private BigDecimal member_phone;
 	private String member_birth;
+	private String member_phone;
 	private String member_gender;
 	private String member_address;
 	public String getMember_address() {
@@ -25,6 +24,12 @@ public class memberinfo {
 	}
 	public void setMember_mail(String member_mail) {
 		this.member_mail = member_mail;
+	}
+	public String getMember_phone() {
+		return member_phone;
+	}
+	public void setMember_phone(String member_phone) {
+		this.member_phone = member_phone;
 	}
 	public String getMember_id() {
 		return member_id;
@@ -43,12 +48,6 @@ public class memberinfo {
 	}
 	public void setMember_name(String member_name) {
 		this.member_name = member_name;
-	}
-	public BigDecimal getMember_phone() {
-		return member_phone;
-	}
-	public void setMember_phone(BigDecimal member_phone) {
-		this.member_phone = member_phone;
 	}
 	public String getMember_birth() {
 		return member_birth;
