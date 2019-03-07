@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>                                
     <jsp:include page="${headerPage}"></jsp:include>
 	<div class="content">
@@ -41,4 +40,4 @@
 			$("#passwordCheckForm").submit();
 		}
 	</script>
-	<jsp:include page="${footer}"></jsp:include>
+<jsp:include page="${footer}"></jsp:include>

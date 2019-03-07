@@ -30,6 +30,18 @@ public class HomeController {
 		req.setAttribute("footer", "common/footer.jsp");
 		return "index";	
 	}	
+	@RequestMapping(value = "/productList.go", method = RequestMethod.GET)
+	public String productList(HttpServletRequest req) {
+		req.setAttribute("headerPage", "../common/header.jsp");
+		req.setAttribute("footer", "../common/footer.jsp");
+		return "product/productList";	
+	}
+	@RequestMapping(value = "/productDetail.go", method = RequestMethod.GET)
+	public String productDetail(HttpServletRequest req) {
+		req.setAttribute("headerPage", "../common/header.jsp");
+		req.setAttribute("footer", "../common/footer.jsp");
+		return "product/productDetail";	
+	}	
 	@RequestMapping(value = "/login.go", method = RequestMethod.GET)
 	public String login(HttpServletRequest req) {
 		req.setAttribute("headerPage", "../common/header.jsp");
