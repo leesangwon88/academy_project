@@ -9,18 +9,7 @@
 				<h3>로그인</h3>
 				<div class="login_box">
 					<form action="logInCheck" method="post" name="loginForm" onsubmit="return loginCheck();">
-						<input type="text" class="user_int" name="member_id" placeholder="아이디 입력">
-
-						<!-- 
-						<c:choose>
-							<c:when test="${cookie.saveID.value != ''}">
-								<input type="text" class="user_int" name="member_id" placeholder="아이디 입력" value="${cookie.saveID.value}">
-							</c:when>
-							<c:when test="${!cookie.saveID.value}">
-								<input type="text" class="user_int" name="member_id" placeholder="아이디 입력">
-							</c:when>
-						</c:choose>
-						-->
+						<input type="text" class="user_int" name="member_id" placeholder="아이디 입력" autofocus>
 						<input type="password" class="user_int" name="member_pw" placeholder="비밀번호 입력">
 						<input type="checkbox" name="" id="id_save" checked><label for="id_save">아이디저장</label>
 						<button class="btn_login">로그인</button>

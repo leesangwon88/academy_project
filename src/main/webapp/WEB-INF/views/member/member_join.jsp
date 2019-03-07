@@ -9,7 +9,7 @@
                 <form action="newMemberCheck.go" method="post" name="form" onsubmit="return memberCheck();">
                     <table>
                         <tr>
-                            <td><input name="member_mail" type="text" placeholder="이메일"><!-- <a href="" class="check">중복확인</a> --></td>
+                            <td><input name="member_mail" type="text" placeholder="이메일" autofocus><!-- <a href="" class="check">중복확인</a> --></td>
                         </tr>
                         <tr>
                             <td><input name="member_id" type="text" placeholder="아이디"><a href="#" id="idCheck" onclick="IDCheck(); return false;" class="check">중복확인</a></td>
@@ -27,7 +27,7 @@
                             <td><input name="member_phone" type="text" placeholder="휴대폰번호"></td>
                         </tr>
                         <tr>
-    						<td class="date_box"><span class="date"><input name="year" type="text" maxlength="4">년 <input name="month" type="text" maxlength="2">월 <input name="day" type="text" maxlength="2">일</span><span class="gender"><input name="member_gender" value="m" type="radio" id="man"><label for="man">남</label><input type="radio" name="member_gender" value="w" id="girl"><label for="girl">여</label></span></td>                        
+    						<td class="date_box"><span class="date"><input name="year" type="text" maxlength="4">년 <input name="month" type="text" maxlength="2">월 <input name="day" type="text" maxlength="2">일</span><span class="gender"><input name="member_gender" value="m" type="radio" id="man" checked><label for="man">남</label><input type="radio" name="member_gender" value="w" id="girl"><label for="girl">여</label></span></td>                        
     					</tr>
                         <tr>
                         	<td><input name="member_address" type="text" placeholder="배송받을 주소"></td>
@@ -72,6 +72,12 @@
             
             <script type="text/javascript" src="resources/js/joinCheck.js"></script>
             <script type="text/javascript" src="resources/js/member.js"></script>            
+            <script>
+	            if("${newMemberResult}"){
+	            	alert("${newMemberResult}");
+	            }
+            </script>
+            
             <div class="join_info_area clear">
                 <div class="join_info1">
                     <h3>이용약관</h3>
