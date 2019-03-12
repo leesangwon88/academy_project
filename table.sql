@@ -9,31 +9,31 @@ create table S_Member(
 	member_address varchar2(50 char) not null
 );
 select*from S_Member;
-drop table S_Member cascade constraint purge;
+drop table S_Outer_Dry cascade constraint purge;
 create table S_Outer(
 	outer_menu varchar2(20 char) not null,
-	outer_name varchar2(20 char) primary key,
+	outer_name varchar2(50 char) primary key,
 	outer_price number(10) not null,
 	outer_stock number(10) not null,
 	outer_sale number(10) not null,
 	outer_todaydel varchar2(1 char) not null
 );
 create table S_Outer_Option(
-	option_name varchar2(20 char) not null,
+	option_name varchar2(50 char) not null,
 	option_color varchar2(10 char) not null,
-	option_size varchar2(10 char) not null,
+	option_size varchar2(30 char) not null,
 	option_sholder number(5) not null,
 	option_chest number(5) not null,
 	option_sleeve number(5) not null,
+	option_kara number(5) not null,
 	option_armhole number(5) not null,
 	option_sumlen number(5) not null,
-	option_hooddepth number(5) not null,
 	constraint S_Outer_Option_key_fk
 	foreign key (option_name)
 	references S_Outer(outer_name)
 );
 create table S_Outer_Dry(
-	dry_name varchar2(20 char) not null,
+	dry_name varchar2(50 char) not null,
 	dry_material varchar2(10 char) not null,
 	dry_lining varchar2(10 char) not null,
 	dry_thickness varchar2(10 char) not null,
@@ -50,7 +50,7 @@ create table S_Outer_Dry(
 );
 create table S_Tshirt(
 	tshirt_menu varchar2(20 char) not null,
-	tshirt_name varchar2(20 char) primary key,
+	tshirt_name varchar2(50 char) primary key,
 	tshirt_price number(10) not null,
 	tshirt_stock number(10) not null,
 	tshirt_sale number(10) not null,
@@ -89,7 +89,7 @@ create table S_Tshirt_Dry(
 );
 create table S_Pants(
 	pants_menu varchar2(20 char) not null,
-	pants_name varchar2(20 char) primary key,
+	pants_name varchar2(50 char) primary key,
 	pants_price number(10) not null,
 	pants_stock number(10) not null,
 	pants_sale number(10) not null,
@@ -127,7 +127,7 @@ create table S_Pants_Dry(
 );
 create table S_Shirt(
 	shirt_menu varchar2(20 char) not null,
-	shirt_name varchar2(20 char) primary key,
+	shirt_name varchar2(50 char) primary key,
 	shirt_price number(10) not null,
 	shirt_stock number(10) not null,
 	shirt_sale number(10) not null,
@@ -166,7 +166,7 @@ create table S_Shirt_Dry(
 );
 create table S_Training(
 	training_menu varchar2(20 char) not null,
-	training_name varchar2(20 char) primary key,
+	training_name varchar2(50 char) primary key,
 	training_price number(10) not null,
 	training_stock number(10) not null,
 	training_sale number(10) not null,
@@ -211,14 +211,14 @@ create table S_Training_Dry(
 );
 create table S_Shoes(
 	shoes_menu varchar2(20 char) not null,
-	shoes_name varchar2(20 char) primary key,
+	shoes_name varchar2(50 char) primary key,
 	shoes_price number(10) not null,
 	shoes_stock number(10) not null,
 	shoes_sale number(10) not null,
 	shoes_todaydel varchar2(1 char) not null
 );
 create table S_Shoes_Option(
-	option_name varchar2(20 char) not null,
+	option_name varchar2(50 char) not null,
 	option_color varchar2(10 char) not null,
 	option_size varchar2(10 char) not null,
 	option_hillheight number(5) not null,
@@ -231,7 +231,7 @@ create table S_Shoes_Option(
 	references S_Shoes(shoes_name)
 );
 create table S_Shoes_Dry(
-	dry_name varchar2(20 char) not null,
+	dry_name varchar2(50 char) not null,
 	dry_material varchar2(20 char) not null,
 	dry_lining varchar2(20 char) not null,
 	dry_thickness varchar2(10 char) not null,
@@ -248,14 +248,14 @@ create table S_Shoes_Dry(
 );
 create table S_Back(
 	back_menu varchar2(20 char) not null,
-	back_name varchar2(20 char) primary key,
+	back_name varchar2(50 char) primary key,
 	back_price number(10) not null,
 	back_stock number(10) not null,
 	back_sale number(10) not null,
 	back_todaydel varchar2(1 char) not null
 );
 create table S_Back_Option(
-	option_name varchar2(20 char) not null,
+	option_name varchar2(50 char) not null,
 	option_color varchar2(10 char) not null,
 	option_size varchar2(10 char) not null,
 	option_horizonal number(5) not null,
@@ -267,7 +267,7 @@ create table S_Back_Option(
 	references S_Back(back_name)
 );
 create table S_Back_Dry(
-	dry_name varchar2(20 char) not null,
+	dry_name varchar2(50 char) not null,
 	dry_material varchar2(20 char) not null,
 	dry_lining varchar2(20 char) not null,
 	dry_thickness varchar2(10 char) not null,
@@ -284,14 +284,14 @@ create table S_Back_Dry(
 );
 create table S_Accessory(
 	accessory_menu varchar2(20 char) not null,
-	accessory_name varchar2(20 char) primary key,
+	accessory_name varchar2(50 char) primary key,
 	accessory_price number(10) not null,
 	accessory_stock number(10) not null,
 	accessory_sale number(10) not null,
 	accessory_todaydel varchar2(1 char) not null
 );
 create table S_Accessory_Option(
-	option_name varchar2(20 char) not null,
+	option_name varchar2(50 char) not null,
 	option_color varchar2(20 char) not null,
 	option_size varchar2(20 char) not null,
 	option_model varchar2(20 char) not null,
@@ -308,7 +308,7 @@ create table S_Accessory_Option(
 	references S_Accessory(accessory_name)
 );
 create table S_Accessory_Dry(
-	dry_name varchar2(20 char) not null,
+	dry_name varchar2(50 char) not null,
 	dry_material varchar2(10 char) not null,
 	dry_lining varchar2(10 char) not null,
 	dry_thickness varchar2(10 char) not null,
@@ -322,5 +322,18 @@ create table S_Accessory_Dry(
 	constraint S_Accessory_Dry_key_fk
 	foreign key (dry_name)
 	references S_Accessory(accessory_name)
+);
+create table S_Review(
+	review_id varchar2(15 char) not null,
+	review_txt varchar2(150 char) not null,
+	review_file varchar2(50 char) not null,
+	review_score number(3) not null,
+	review_date date not null
+);
+create table S_Review_re(
+	re_review_id varchar2(15 char) primary key,
+	re_id varchar2(15 char) not null,
+	re_txt varchar2(15 char) not null,
+	re_date date not null
 );
 

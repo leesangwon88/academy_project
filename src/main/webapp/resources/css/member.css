@@ -270,6 +270,7 @@
 }
 
 .login_box {
+	position: relative;
     margin-bottom:30px;
 }
 
@@ -299,6 +300,14 @@
     font-size: 20px;
     color:#fff;
     background: #000;
+}
+
+.login_box .warning_noti{
+	position: absolute;
+    top: 97px;
+    right: 0;
+    color: red;
+    font-weight: bold;
 }
 
 .login_another {
@@ -422,6 +431,13 @@
     line-height: 1.5;
     letter-spacing: -1px;
     text-align: center;
+}
+
+.password_check .caution_noti {
+	width: 270px;
+	margin: 15px auto 0;
+	font-size: 14px;
+	color: red;
 }
 
 .password_check .check {

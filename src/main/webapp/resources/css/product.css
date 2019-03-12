@@ -1,0 +1,749 @@
+.detail_head .view {
+    float:left;
+    width:600px;
+}
+
+.detail_head .decision {
+    float:left;
+    width:600px;
+    margin: 20px 0 0 80px;
+}
+
+.detail_head .decision .name {
+    padding-bottom: 20px;
+    margin-bottom:20px;
+    border-bottom:1px solid #ccc;
+}
+
+.detail_head .decision .name h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.detail_head .decision .name span {
+    display: block;
+}
+
+.detail_head .decision .name .notice {
+    margin-top:5px;
+    font-size: 11px;
+    color:#0093ff;
+}
+
+.detail_head .info {
+    padding-bottom:10px;
+    border-bottom:1px solid #ccc;
+}
+
+.detail_head .info li {
+    margin-bottom:12px;
+}
+
+.detail_head .info .title {
+    display: inline-block;
+    width:100px;
+}
+
+.detail_head .info .cnt {
+    display: inline-block;
+    width: 495px;
+    font-size:14px;
+    
+}
+
+.detail_head .sale .cnt {
+    text-decoration:line-through;
+    color:#ccc;
+}
+
+.detail_head .selling .cnt {
+    font-size: 12px;
+}
+
+.detail_head .selling .cnt em {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.detail_head .info select {
+    width: 495px;
+    height: 30px;
+}
+
+.detail_head .buy_list {
+
+}
+
+
+.detail_head .buy_list > div {
+    position: relative;
+    padding:5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.detail_head .buy_list p {
+    width: 430px;
+    padding: 10px 0;
+}
+
+.detail_head .buy_list .control {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}
+
+.detail_head .control input {
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+.detail_head .control span {
+    display: inline-block;
+    width: 70px;
+    font-weight: bold;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.detail_head .control a {
+    display: inline-block;
+    height: 13px;
+    margin-top: 1px;
+    padding: 5px;
+}
+
+
+.detail_head .all_price {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.detail_head .all_price em {
+    font-weight: bold;
+    font-size:20px;
+}
+
+.detail_head .btn_box {
+    margin-top:20px;
+}
+
+.detail_head .btn_box a {
+    display: inline-block;
+}
+
+.detail_head .btn_box .buy {
+    width:458px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.detail_head .btn_box .btn {
+    border: 1px solid #ccc;
+    padding: 10px 10px 9px;
+}
+
+.detail_head .btn_box .cart {
+    margin-left: 17px;
+}
+
+.detail_head .detail_info {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.detail_head .detail_info span {
+    display: block;
+    margin-bottom:5px;
+    font-weight: bold;
+    color: #ff2727;
+}
+
+.detail_head .detail_info p {
+color: #7b7b7b;
+}
+
+.product_tab {
+    width: 800px;
+    margin: 0 auto 40px;
+}
+
+
+.product_tab li {
+    float:left;
+    width: 200px;
+}
+
+.product_tab a {
+    display: block;
+    box-sizing: border-box;
+    width: 180px;
+    margin:0 auto;
+    border: 3px solid #ccc;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 39px;
+
+}
+
+.product_tab a:hover {
+    background: #f3f3f3;
+    color:#333;
+}
+
+.product_tab .on a {
+    background: #000;
+    border-color: #000;
+    font-weight: bold;
+    color: #fff;
+}
+    
+#detailReview { 
+    width:1000px;
+}
+
+#detailReview .review_write {
+    float: left;
+    width: 450px;
+}
+
+.review_write .notice {
+    margin-bottom: 5px;
+    color: #8f8f8f;
+}
+
+.review_write .notice .title {
+    font-weight: bold;
+    vertical-align: -1px;
+    color: #333;
+}
+
+.review_write textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.review_write .notice .bar {
+    margin: 0 6px;
+}
+
+.review_write select {
+    width: 110px;
+    height: 22px;
+}
+
+.review_write .file_btn {
+    width:200px;
+}
+
+.review_write .write_btn {
+    width: 131px;
+    height: 41px;
+    color: #fff;
+    background: #444;
+    -webkit-transition: background-color 0.5s, -webkit-transform 2s;
+    transition: background-color 0.5s, transform 2s;
+}
+
+.review_write .write_btn:hover {
+    background: #111;
+}
+
+
+.review_write .photo_btn span:hover {
+    background: #d8d8d8;
+    cursor: pointer;
+}
+
+#detailReview .star_array { 
+    float: left;
+    width: 492px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    margin-left: 16px;
+    margin-top: 22px;
+}
+
+.star_array .total { 
+    float: left;
+    width: 110px;
+    margin-right: 30px;
+}
+
+.star_array .total em { 
+    display:block;
+    width: 110px;
+    height: 80px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 80px;
+    font-size: 50px;
+    background: #252525;
+    color: #fff;
+}
+
+.star_array .total span {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    color: #777;
+}
+
+.star_array .star_graph { 
+    float: left;
+    width: 350px;
+}
+
+.star_array .star_graph li { 
+    margin-bottom: 4px;
+}
+
+.star_graph .name {
+    display: block;
+    float: left;
+    width: 60px;
+    color: #9d9d9d;
+}
+
+.star_graph .percentile {
+    float:left;
+    width: 240px;
+    height: 16px;
+    background: #f4f4f4;
+    position: relative; 
+    
+}
+
+.star_graph .percentile > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #ff4c23; 
+}
+
+.star_graph .count {
+    display: block;
+    width: 50px;
+    float: left;
+    text-align: right;
+    color: #9d9d9d;
+}
+
+.star_array > div {
+    margin-bottom: 10px;
+}
+
+.star_array .explain {
+    font-size:14px;
+}
+
+.star_array .explain span {
+    font-weight: bold;
+    color: #ff4c23;
+}
+
+#detailReview .array_review {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ccc;
+}
+
+#detailReview .array_review a {
+    font-size: 14px;
+}
+
+#detailReview .array_review a.on {
+    font-weight: bold;
+    color:#111;
+}
+
+#detailReview .array_review span {
+    margin: 0 10px;
+    vertical-align: middle;
+    color: #ccc;
+}
+
+#detailReview .review_box {
+    position: relative;
+    padding:30px 10px 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+#detailReview .review_box .writer {
+    position: absolute;
+    top:20px;
+    right:10px;
+}
+
+#detailReview .review_box .writer span {
+    color: #ccc;
+}
+
+#detailReview .review_box .writer em {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+}
+
+#detailReview .review_box .star { 
+    display: inline-block;  
+    width: 12px;
+    height: 12px;
+    margin-right: 1px;
+    background: url('../img/product/star.png') no-repeat 0 0;
+}
+
+#detailReview .star.unstar { 
+    background-position: -24px 0;
+}
+
+#detailReview .user_star {
+    margin-bottom: 10px;
+}
+
+#detailReview .user_star em {
+    margin-left: 10px;
+    vertical-align: 2px;
+    color: #888;
+}
+
+#detailReview .review_cnt {
+    margin-bottom:20px;
+    line-height: 15px;
+    font-family: '돋움', Dotum;
+}
+#detailReview .review_cnt .photo {
+    margin-top: 20px;
+}
+
+.review_reply { 
+    padding:15px 20px;
+    border:1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.review_reply li { 
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc; 
+    font-family: '돋움', Dotum;
+}
+
+.review_reply li:last-child {
+    border: none;
+}
+
+.review_reply li em {
+    display: block;
+    float:left;
+    width: 120px;
+    font-weight: bold;
+    color: #444;
+}
+.review_reply li span {
+    display: block;
+    float: left;
+    width: 810px;
+}
+
+.review_reply .reply_write {
+    position: relative;
+}
+
+.review_reply .reply_write input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+    padding-right: 70px;
+}
+
+.review_reply .reply_write a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid #a9a9a9;
+    width: 55px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    -webkit-transition: color 0.5s, background-color 0.5s, -webkit-transform 2s;
+    transition: color 0.5s, background-color 0.5s, transform 2s;
+}
+
+.review_reply .reply_write a:hover {
+    background: #444;
+    color:#fff;
+}
+
+.review_paging a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.review_paging a.on {
+    background: #ccc;
+}
+
+.detailTab {
+	padding-top: 140px;
+	margin: -40px auto 0;
+}
+
+#detailView .detail_img {
+    margin-bottom:40px;
+    text-align: center;
+}
+
+.product_size_info {
+    width:1000px;
+    margin: 0 auto;
+}
+
+.product_size_info h3 {
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.product_size_info .notice {
+    display: inline-block;
+    width:390px;
+}
+
+.product_size_info .notice .img {
+    text-align: center;
+}
+
+.product_size_info .info {
+    display: inline-block;
+    width:590px;
+    vertical-align: top;
+}
+
+.product_size_info .info .inner_notice {
+    margin-bottom: 8px;
+    text-align: right;
+    color: ##9d9c9c;
+}
+
+.product_size_info .info .inner_notice span {
+    font-weight: bold;
+}
+
+.product_size_info .info table {
+    margin-bottom: 20px;
+}
+
+
+.product_size_info .info th, .product_size_info .info td {
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #ccc;    
+}
+
+.product_size_info .info th {
+    font-weight: bold;
+    background: #f2f2f2;
+    color: #787878;
+}
+
+.product_size_info .info th:first-child {
+    width: 180px;
+}
+
+#detailQuestion {
+    width: 1000px;
+}
+
+#detailQuestion .question_title {
+    margin-bottom: 50px;
+}
+
+#detailQuestion .question_write {
+    margin-bottom:50px;
+}
+
+.question_write form > div {
+    padding:10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.question_write .name {
+    display:inline-block;
+    width: 100px;
+    font-size: 14px;
+    color: #777;
+}
+
+.question_write .name_inp {
+    width: 880px;
+    padding: 10px;
+    box-sizing: border-box;    
+}
+
+.question_write .title_input {
+    width: 880px;
+    padding: 10px;
+    box-sizing: border-box;    
+}
+
+.question_write textarea {
+    width: 880px;
+    height: 70px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;   
+}
+
+.question_write .write_box {
+    border-bottom: none;
+    text-align: right;
+}
+
+.question_write .write_box button {
+    width: 131px;
+    height: 41px;
+    color: #fff;
+    background: #444;
+    -webkit-transition: background-color 0.5s, -webkit-transform 2s;
+    transition: background-color 0.5s, transform 2s;
+}
+
+.question_write .write_box button:hover {
+    background: #111;
+}
+
+#detailQuestion h3 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#detailQuestion .explanation {
+    margin-top:10px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.question_list th, .question_list td {
+    height: 40px;
+    border:none;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.question_list th {
+    font-weight: bold;
+    background:#f5f5f5;
+}
+
+.question_list .title {
+    width:600px;
+}
+
+.question_list td.title {
+    text-align: left;
+}
+
+.question_list .title a {
+    padding: 5px;
+    color: #666;
+}
+
+.question_list .title a:hover {
+    color:#000;
+}
+
+.question_list .title img {
+    margin-right:4px;
+    vertical-align: middle;
+}
+
+.paging {
+    margin:15px auto 0;
+    text-align: center;
+}
+
+.paging li {
+    display: inline-block;
+}
+
+.paging a {
+    padding: 4px;
+    margin: 0 2px;
+    font-size: 15px;
+}
+
+.paging .on a,.paging a:hover {
+    color:red;
+}
+
+.paging .prev {
+    margin-right: 5px;
+}
+
+.paging .next {
+    margin-left: 5px;
+}
+
+#FAQ .FAQ_title {
+    margin-bottom: 30px;
+}
+
+#FAQ h3 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#FAQ .explanation {
+    margin-top:10px;
+    text-align: center;
+}
+
+#FAQ table {
+
+}
+
+
+#FAQ th, #FAQ td {
+    padding:10px 20px;
+    border: 1px solid #ccc;
+    font-family: "돋움",Dotum,sans-serif;
+    vertical-align: middle;
+    font-size: 11px;
+}
+
+#FAQ th {
+    width:100px;
+    text-align: left;
+    font-weight: bold;
+    color:#3b3b3d;
+    background: #f8f8f8;
+}
+
+#FAQ td {
+    color: #8b8b8b;
+}

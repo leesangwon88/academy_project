@@ -3,7 +3,7 @@
 			<div class="myinfo_nav">
 				<h3>나의 쇼핑정보</h3>
 				<ul>
-					<li><a href="">마이페이지</a></li>
+					<li><a href="myPage.go">마이페이지</a></li>
 					<li><a href="">주문조회</a></li>
 					<li><a href="">적립금내역</a></li>
 					<li><a href="">쿠폰내역</a></li>

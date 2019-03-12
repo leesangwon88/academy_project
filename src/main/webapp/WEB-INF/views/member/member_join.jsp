@@ -9,7 +9,7 @@
                 <form action="newMemberCheck.go" method="post" name="form" onsubmit="return memberCheck();">
                     <table>
                         <tr>
-                            <td><input name="member_mail" type="text" placeholder="이메일"><!-- <a href="" class="check">중복확인</a> --></td>
+                            <td><input name="member_mail" type="text" placeholder="이메일" autofocus><!-- <a href="" class="check">중복확인</a> --></td>
                         </tr>
                         <tr>
                             <td><input name="member_id" type="text" placeholder="아이디"><a href="#" id="idCheck" onclick="IDCheck(); return false;" class="check">중복확인</a></td>
@@ -27,7 +27,7 @@
                             <td><input name="member_phone" type="text" placeholder="휴대폰번호"></td>
                         </tr>
                         <tr>
-    						<td class="date_box"><span class="date"><input name="year" type="text" maxlength="4">년 <input name="month" type="text" maxlength="2">월 <input name="day" type="text" maxlength="2">일</span><span class="gender"><input name="member_gender" value="m" type="radio" id="man" checked=""><label for="man">남</label><input type="radio" name="member_gender" value="w" id="girl"><label for="girl">여</label></span></td>                        
+    						<td class="date_box"><span class="date"><input name="year" type="text" maxlength="4">년 <input name="month" type="text" maxlength="2">월 <input name="day" type="text" maxlength="2">일</span><span class="gender"><input name="member_gender" value="m" type="radio" id="man" checked><label for="man">남</label><input type="radio" name="member_gender" value="w" id="girl"><label for="girl">여</label></span></td>                        
     					</tr>
                         <tr>
                         	<td><input name="member_address" type="text" placeholder="배송받을 주소"></td>
@@ -42,7 +42,7 @@
                                 </div>
                                 <dl class="member_type_ex">
                                     <dt>평생 회원?</dt>
-                                    <dd>오랫동안 방문하지 않아도 고객님의 소중한 적립금과 쿠폰을 보호해 드립니다.<br>평생 회원 가입 시, 평생 회원 가입 감사 <u>적립금 1,000원</u> 제공<br>가입 후 3개월 마다 평생 회원 가입 감사 <u>무료배송쿠폰</u> 제공</dd>
+                                    <dd>오랫동안 방문하지 않아도 고객님의 소중한 적립금과 쿠폰을 보호해 드립니다.<br>평생 회원 가입 시, 평생 회원 가입 감사 적립금 1,000원 제공<br>가입 후 3개월 마다 평생 회원 가입 감사 무료배송쿠폰 제공</dd>
                                 </dl>
                             </td>
                         </tr>
@@ -72,6 +72,12 @@
             
             <script type="text/javascript" src="resources/js/joinCheck.js"></script>
             <script type="text/javascript" src="resources/js/member.js"></script>            
+            <script>
+	            if("${newMemberResult}"){
+	            	alert("${newMemberResult}");
+	            }
+            </script>
+            
             <div class="join_info_area clear">
                 <div class="join_info1">
                     <h3>이용약관</h3>

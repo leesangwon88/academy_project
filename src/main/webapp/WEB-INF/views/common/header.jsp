@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/index.css">
     <link rel="stylesheet" type="text/css" href="resources/css/member.css">
     <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/product.css">
 	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css">
 </head>
 
@@ -46,15 +47,19 @@
                     <li><a href="newMember.go">회원가입</a></li>
                     </c:if>                    
                     <li><a href="myPage.go">마이페이지</a></li>
+                    <!-- 
                     <li><a href="">커뮤니티</a></li>
                     <li><a href="">고객센터</a></li>
+                    -->
                     <li class="link_put"><a href=""><img src="resources/img/index/cart_icon.png" alt="장바구니"><span>0</span></a></li>
+                    <!-- 
                     <li class="search_box">
                         <div class="search">
                             <input>
                             <a href=""><img src="resources/img/index/search.png"></a>
                         </div>
                     </li>
+                     -->
                 </ul>
             </div>
         </div>
@@ -69,7 +74,7 @@
         </div>
         <div id="nav">
             <ul class="nav_list clear">
-                <li class="clear"><a href="">BEST50</a></li>
+                <li class="clear"><a href="productList.go">BEST50</a></li><!-- 임시로 작업 -->
                 <li><a href="">NEW30%</a></li>
                 <li><a href="">코디세트</a></li>
                 <li class="emp"><a href="">당일발송</a></li>
@@ -101,7 +106,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="">팬츠</a>
+                    <a href="productList.go">팬츠</a>
                     <div class="list_detail">
                         <ul>
                             <li><a href="">데님</a></li>

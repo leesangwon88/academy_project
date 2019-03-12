@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>                                
     <jsp:include page="${headerPage}"></jsp:include>
 	<div class="content">
 		<div id="myinfo_rap" class="clear">
@@ -20,9 +20,12 @@
                         </div>
                     	<div class="password">
                             <span class="name">비밀번호</span>
-                            <span class="cnt"><input type="password" name="member_pw" placeholder="비밀번호입력"></span>
+                            <span class="cnt"><input type="password" name="member_pw" placeholder="비밀번호입력" autofocus></span>
                         </div>
-                    </div>
+                        <c:if test="${!empty logResult}">
+	                        <p class="caution_noti">${logResult}</p>
+	                    </c:if>                    
+	                </div>
                     </form>
                     <div class="btn_area">
                         <a href="#" onclick="memberDel(); return false;" class="send">확인</a>
@@ -37,4 +40,4 @@
 			$("#passwordCheckForm").submit();
 		}
 	</script>
-	<jsp:include page="${footer}"></jsp:include>
+<jsp:include page="${footer}"></jsp:include>

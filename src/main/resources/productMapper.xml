@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.shopping.mall.product.productInterface">
-
+	<select id="getOuter" parameterType="com.shopping.mall.product.outerInfo" resultType="com.shopping.mall.product.outerInfo">
+		select*from S_Outer outer_name=#{outer_name}
+	</select>
+	<select id="getOuterOption" parameterType="com.shopping.mall.product.outerOption" resultType="com.shopping.mall.product.outerOption">
+		select*from S_Outer_Option where option_name=#{option_name}
+	</select>
+	<select id="getOuterDry" parameterType="com.shopping.mall.product.outerDry" resultType="com.shopping.mall.product.outerDry">
+		select*from S_Outer_Dry where dry_name=#{dry_name}
+	</select>
 </mapper>

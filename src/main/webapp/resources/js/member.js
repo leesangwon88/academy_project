@@ -10,6 +10,7 @@ var month = document.form.month;
 var day = document.form.day;
 var address = document.form.member_address;
 
+
 $("#allCheck").on("click", function(){
 	if($("#allCheck").prop("checked")){
 		$(".agreement_detail input[type='checkbox']").prop("checked", true);
@@ -47,6 +48,60 @@ function IDCheck() {
     })
 }  
 
+
+function setCookie(cName, cValue, cDay){
+      var expire = new Date();
+      expire.setDate(expire.getDate() + cDay);
+      cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+      if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+      document.cookie = cookies;
+ }
+
+ // 쿠키 가져오기
+ function getCookie(cName) {
+      cName = cName + '=';
+      var cookieData = document.cookie;
+      var start = cookieData.indexOf(cName);
+      var cValue = '';
+      if(start != -1){
+           start += cName.length;
+           var end = cookieData.indexOf(';', start);
+           if(end == -1)end = cookieData.length;
+           cValue = cookieData.substring(start, end);
+      }
+      return unescape(cValue);
+}
+
+// 로그인시 아이디, 패스워드 체크 후 아이디저장여부
+function loginCheck(){
+	var id = document.loginForm.member_id;
+	var pw = document.loginForm.member_pw;
+	
+	if(isEmpty(id)){
+		alert("아이디를 입력해주세요.");
+		id.focus();
+		return false;
+	}else if(isEmpty(pw)){
+		alert("패스워드를 입력해주세요.");	
+		pw.focus();
+		return false;
+	}
+	
+	if($("#id_save").is(":checked")){
+		setCookie('saveID', id.value, 1);
+	}else{
+		setCookie('saveID', '', '-1');
+	}
+	
+	return true;	
+}
+
+function loginCookieCheck(){
+	$(".user_int").val(getCookie('saveID'));
+	
+}
+
+
 function memberCheck(){
 	if(isEmpty(email)){
 		alert("이메일을 입력해주세요.");
@@ -56,12 +111,12 @@ function memberCheck(){
 		alert("아이디를 입력해주세요.");	
 		id.focus();
 		return false;
-	}else if(!userIDCheck){
-		alert("ID 중복검사를 해주세요.");	
-		id.focus();
-		return false;
 	}else if(HangulCheck(id)){
 		alert("아이디에는 특수문자와 한글사용 할수 없습니다.");	
+		id.focus();
+		return false;
+	}else if(!userIDCheck){
+		alert("ID 중복검사를 해주세요.");	
 		id.focus();
 		return false;
 	}else if(isEmpty(pw)){
@@ -100,6 +155,18 @@ function memberCheck(){
 		alert("생년월일을 입력해주세요.");	
 		year.focus();
 		return false;
+	}else if(lessThan(year,4)){
+		alert("년도 4자리를 입력해주세요.");	
+		year.focus();
+		return false;
+	}else if(lessThan(month,2)){
+		alert("월 2자리로 입력해주세요.");	
+		month.focus();
+		return false;
+	}else if(lessThan(day,2)){
+		alert("일 2자리로 입력해주세요.");	
+		day.focus();
+		return false;
 	}else if(isEmpty(address)){
 		alert("배송받을 주소를 입력해주세요.");	
 		address.focus();
@@ -113,12 +180,12 @@ function memberInfoChangeCheck(){
 		alert("이메일을 입력해주세요.");
 		email.focus();
 		return false;
-	}else if(isEmpty(id)){
-		alert("아이디를 입력해주세요.");	
-		id.focus();
-		return false;
 	}else if(HangulCheck(id)){
 		alert("아이디에는 특수문자와 한글사용 할수 없습니다.");	
+		id.focus();
+		return false;
+	}else if(!userIDCheck){
+		alert("ID 중복검사를 해주세요.");	
 		id.focus();
 		return false;
 	}else if(isEmpty(pw)){
@@ -156,6 +223,18 @@ function memberInfoChangeCheck(){
 	}else if(isEmpty(year) || isEmpty(month) || isEmpty(day)){
 		alert("생년월일을 입력해주세요.");	
 		year.focus();
+		return false;
+	}else if(lessThan(year,4)){
+		alert("년도 4자리를 입력해주세요.");	
+		year.focus();
+		return false;
+	}else if(lessThan(month,2)){
+		alert("월 2자리로 입력해주세요.");	
+		month.focus();
+		return false;
+	}else if(lessThan(day,2)){
+		alert("일 2자리로 입력해주세요.");	
+		day.focus();
 		return false;
 	}else if(isEmpty(address)){
 		alert("배송받을 주소를 입력해주세요.");	
