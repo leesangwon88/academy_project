@@ -9,7 +9,7 @@ create table S_Member(
 	member_address varchar2(50 char) not null
 );
 select*from S_Member;
-drop table S_Outer_Dry cascade constraint purge;
+drop table S_Outer_Option cascade constraint purge;
 create table S_Outer(
 	outer_menu varchar2(20 char) not null,
 	outer_name varchar2(50 char) primary key,
@@ -314,7 +314,6 @@ create table S_Accessory_Dry(
 	dry_thickness varchar2(10 char) not null,
 	dry_sizeclass varchar2(10 char) not null,
 	dry_elastick varchar2(10 char) not null,
-	dry_nonvisual varchar2(10 char) not null,
 	dry_handdry varchar2(10 char) not null,
 	dry_machinedry varchar2(10 char) not null,
 	dry_drycleaning varchar2(10 char) not null,

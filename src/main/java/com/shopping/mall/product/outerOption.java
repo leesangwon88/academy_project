@@ -15,7 +15,6 @@ public class outerOption {
 	private BigDecimal option_hooddepth;
 	
 	public outerOption() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getOption_name() {

@@ -15,12 +15,12 @@ insert into S_Outer_Option values(
 	43,
 	23,
 	76,
-	34,
+	34
 );
 insert into S_Outer_Dry values(
 	'봄 가디건 + 상의 코디세트',
 	'폴리100%',
-	'X',
+	'O',
 	'적당함',
 	'크게 나옴',
 	'없음',
@@ -30,8 +30,6 @@ insert into S_Outer_Dry values(
 	'가능',
 	'불가'
 );
-select*from S_OUTER_OPTION where option_name = '[1+1] 봄 가디건 + 상의 코디세트';
-delete from S_OUTER_DRY where dry_name = '봄 가디건 + 상의 코디세트';
-
-
+select*from S_OUTER_OPTION;
+delete from S_OUTER where outer_name = '봄 가디건 + 상의 코디세트';
 

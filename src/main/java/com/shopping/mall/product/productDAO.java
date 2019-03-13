@@ -25,10 +25,10 @@ public class productDAO {
 		ArrayList<String> length = new ArrayList<String>();
 		ArrayList<ArrayList<String>> option = new ArrayList<ArrayList<String>>();
 		List<outerOption> lo = null;
-		System.out.println(request.getParameter("outer_name"));
 		oo.setOption_name(request.getParameter("outer_name"));
 		try {
 			lo = ss.getMapper(productInterface.class).getOuterOption(oo);
+			
 			if (lo != null) {
 				for (int i = 0; i < lo.size(); i++) {
 					size.add(lo.get(i).getOption_size());
@@ -59,7 +59,6 @@ public class productDAO {
 	public boolean getOuterDry(outerDry od, HttpServletRequest request) {
 		outerDry otd = null;
 		ArrayList<String> dry = new ArrayList<String>();
-		System.out.println(request.getParameter("outer_name"));
 		od.setDry_name(request.getParameter("outer_name"));
 		try {
 			otd = ss.getMapper(productInterface.class).getOuterDry(od);
